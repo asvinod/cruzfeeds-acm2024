@@ -1,0 +1,32 @@
+# Ignore the virtual environment directory
+venv/
+
+# Ignore Python bytecode files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore environment variable files
+.env
+
+# Ignore log files
+*.log
+
+# Ignore IDE/editor specific files
+.vscode/
+.idea/
+
+# Ignore temporary files and backups
+*~
+*.bak
+*.tmp
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore coverage reports
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/

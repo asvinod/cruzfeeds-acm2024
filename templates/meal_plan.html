@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Plan</title>
+    <style>
+        body {
+            background-image: url('https://i.redd.it/3zlq2oso9yba1.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #0033A0;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            background: rgba(255, 204, 0, 0.95);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #0033A0;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .meal-card {
+            background-color: #ffffff; /* White background for meal cards */
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .meal-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .meal-details {
+            font-size: 1.2rem;
+            color: #0033A0;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Meal Plan</h1>
+        <p>Here are your meal options based on your caloric goal:</p>
+
+        <div class="meal-options">
+            {% for meal in meal_options %}
+            <div class="meal-card">
+                <div class="meal-details">
+                    Protein: {{ meal.protein }}<br>
+                    Grain: {{ meal.grain }}<br>
+                    Vegetable: {{ meal.vegetable }}<br>
+                    {% if meal.dessert %}
+                    Dessert: {{ meal.dessert }}<br>
+                    {% endif %}
+                    <strong>Total Calories: {{ meal.total_calories }}</strong>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

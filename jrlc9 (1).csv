@@ -1,0 +1,42 @@
+Food_Item,Meal_Type,Calories,Serving Size,Carbs,Sugar,Protein,Category,Restrictions
+Cage Free Scrambled Eggs,Breakfast,50,3 oz,0 g,1.4 g,8.4 g,P,Vegetarian Eggs Gluten
+Chicken Apple Sausage,Breakfast,135,3 sausages,1.5 g,3 g,12 g,P,Milk Gluten
+Hard-boiled Cage Free Egg,Breakfast,86,1 egg,0.2 g,0.2 g,7.6 g,P,Vegetarian Eggs Gluten
+Organic Gluten-Free Oatmeal,Breakfast,191,6 fl oz,33.6 g,0,6.4 g,G,Vegan Gluten
+Roasted Red Potatoes,Breakfast,97,3 oz,16.9 g,1.4 g,1.7 g,V,Vegan Gluten
+"Sweet Potato, Black Bean, Kale Hash",Breakfast,145,4 oz,9.3 g,6.8 g,3 g,V,Vegan Gluten
+Whole Wheat Vegan Blueberry Pancakes,Breakfast,122,2 oz,12.0 g,4.3 g,2.5 g,G,Vegan Soy 
+Apple Strudel,Breakfast,1579,1 strudel,102.8 g,7.3 g,19.9 g,D,Vegan Soy 
+Blueberry Muffin,Breakfast,265,1 muffin,13.2 g,22 g,1.7 g,D,Vegetarian Soy Eggs Milk
+Chocolate Muffin,Breakfast,250,1 muffin,11.1 g,19.1 g,3 g,D,Vegetarian Soy Eggs Milk
+Potato Leek Soup,Lunch,146,6 fl oz,14.5 g,2.3 g,1.7 g,V,Vegan
+Caramelized Chipotle Chicken,Lunch,283,4 oz,2.3 g,6.9 g,22.9 g,P,Gluten
+Lemon Rice,Lunch,125,3 oz,16.7 g,0.5 g,2 g,G,Vegan Gluten
+Roasted Green Beans in Garlic Oil,Lunch,74,3 oz,1.7 g,2.8 g,1.6 g,V,Vegan Gluten
+Tempeh Roasted with Chorizo Spice,Lunch,196,3 oz,6.7 g,0,15 g,P,Vegan Soy Gluten
+French Fries,Lunch,206,3 oz,19.2 g,0,2 g,V,Vegetarian Soy
+Halal Chicken Nuggets,Lunch,170,3 oz,12.8 g,0,14.5 g,P,Soy Eggs Milk 
+Vegan Tenders,Lunch,205,3 pieces,8.9 g,0,12.5 g,P,Vegan Soy
+Cheese Pizza,Lunch,183,1/12 total,20.4 g,1.9 g,10.8 g,P,Vegatarian Soy Eggs Milk 
+Allergen Free Halal Chicken Thigh,Lunch,180,3.5 oz,0,0,25 g,P,Gluten
+Steamed Rice,Lunch,144,4 oz,33.2 g,0,2.8 g,G,Vegan Gluten
+Tofu with Kosher Salt,Lunch,163,4 oz,0.6 g,0,19.6 g,P,Vegan Soy Gluten
+Braised Pork,Lunch,235,3 oz,0.1 g,0,23.2 g,P,Gluten
+Green Onion Slaw,Lunch,17,2 oz,0.4 g,1.1 g,0.4 g,V,Vegan Gluten
+Ranch Chili Beans,Lunch,79,3 oz,7.8 g,1.1 g,3.9 g,V,Vegan Gluten
+Sidewinder Fry,Lunch,218,3 oz,20.5 g,0,1 g,V,Vegetarian Soy   
+Vegan Chocolate Chip Cookie,Lunch,96,1 cookie,5.1 g,13.1 g,1 g,D,Vegan Soy
+Lemon Loaf,Lunch,507,1 loaf,25.7 g,39.7 g,3.4 g,D,Vegetarian Soy Eggs Milk
+Manhattan Clam Chowder,Dinner,110,6 fl oz,10.1 g,3.7 g,4.4 g,V,Gluten
+Organic Vegan Chili,Dinner,97,6 fl oz,8.3 g,3.7 g,4.5 g,V,Vegan Gluten
+Garlic Thyme Mushrooms,Dinner,47,2 oz,1.7 g,2.2 g,1g ,V,Vegan Gluten
+Gnocchi in Brown Butter and Sage Sauce,Dinner,266,4 oz,29.5 g,1.4 g,8.8 g,P,Vegetarian Eggs Milk
+Sauteed Rainbow Chard with Garlic Oil,Dinner,22,1 oz,0.5 g,0.3 g,0.5 g,V,Vegan Gluten
+Vegan Spinach and Roasted Garlic Pizza,Dinner,222,1/8 total,29.7 mg,3.2 g,2.8 g,V,Vegan
+Corn Tortillas,Dinner,55,1 tortilla,10.5 g,0,1 g,G,Vegan Gluten
+"Flour Tortilla 6"" ",Dinner,100,1 tortilla,14 g,0,2 g,G,Vegan Soy
+Happy Plant Vegan Chorizo Crumbles and Potatoes,Dinner,149,3 oz,7.3 g,2.1 g,8.9 g,P,Vegan Gluten
+Mexican Rice,Dinner,89,3 oz,16.4 g,0.9 g,2 g,G,Vegan Gluten
+Pork Carnitas,Dinner,220,3 oz,0,0,21.8 g,P,Gluten
+Vegan Refried Beans ,Dinner,106,4 oz,10.6 g,2.3 g,4.8 g,V,Vegan Gluten
+Brownie M&M,Dinner,336,1 brownie,14.3 g,40.2 g,3.5 g,D,Vegetarian Soy Eggs Milk Nuts

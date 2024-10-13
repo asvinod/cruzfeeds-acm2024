@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Your Goal</title>
+    <style>
+        body {
+            background-image: url('https://i.redd.it/3zlq2oso9yba1.jpg'); /* Background image */
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #0033A0; /* UCSC Blue */
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center; /* Center the container horizontally */
+            align-items: center; /* Center the container vertically */
+            height: 100vh;
+        }
+
+        .container {
+            background: rgba(255, 204, 0, 0.95); /* Bright UCSC Gold */
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3),
+                        inset 0 0 25px rgba(255, 255, 0, 0.3); /* Inner glow for shine effect */
+            max-width: 400px; /* Added max-width for better layout */
+            width: 100%; /* Make it responsive */
+            text-align: center; /* Center text inside the container */
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #0033A0;
+            margin-bottom: 20px;
+            font-weight: bold; /* Make the heading bold */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+        }
+
+        label {
+            font-size: 1.2rem;
+            font-weight: normal;
+            color: #0033A0; /* Ensure label color is consistent */
+            display: block;
+            margin: 10px 0;
+            text-align: left; /* Align text left for labels */
+        }
+
+        select {
+            padding: 10px;
+            font-size: 1rem;
+            margin: 10px 0 20px;
+            border-radius: 5px;
+            border: 2px solid #0033A0;
+            width: calc(100% - 22px); /* Full width minus padding/border */
+            box-sizing: border-box; /* Ensure padding is included in total width */
+        }
+
+        button {
+            padding: 12px;
+            font-size: 1.1rem;
+            background-color: #0033A0;
+            color: #FFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%; /* Full width for the button */
+            transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover */
+        }
+
+        button:hover {
+            background-color: #001F5C;
+            transform: translateY(-2px); /* Slightly lift the button on hover */
+        }
+
+        button:active {
+            transform: translateY(0); /* Return to original position on click */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Select Your Goal</h1>
+        <form method="POST" action="{{ url_for('goal') }}">
+            <label for="goal">Select your goal:</label>
+            <select name="goal" id="goal">
+                <option value="gain">Weight Gain</option>
+                <option value="lose">Weight Loss</option>
+                <option value="maintain">Maintain Current Weight</option>
+            </select>
+            <button type="submit">Next</button>
+        </form>
+    </div>
+</body>
+</html>

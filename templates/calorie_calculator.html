@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Your Data</title>
+    <style>
+        body {
+            background-image: url('https://i.redd.it/3zlq2oso9yba1.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #0033A0; /* UCSC Blue */
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: rgba(255, 204, 0, 0.95); /* Bright UCSC Gold */
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3),
+                        inset 0 0 25px rgba(255, 255, 0, 0.3); /* Inner glow for shine effect */
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #0033A0;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        label {
+            font-size: 1.2rem;
+            color: #0033A0;
+            display: block;
+            margin: 10px 0;
+            text-align: left;
+        }
+
+        input[type="text"], select {
+            padding: 10px;
+            font-size: 1rem;
+            margin: 10px 0 20px;
+            border-radius: 5px;
+            border: 2px solid #0033A0;
+            width: calc(100% - 22px);
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 12px;
+            font-size: 1.1rem;
+            background-color: #0033A0;
+            color: #FFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 48%;
+            margin: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: #001F5C;
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Input Your Data</h1>
+        <form id="dataForm" method="POST">
+            <label for="height">Height (in):</label>
+            <input type="text" id="height" name="height" required>
+
+            <label for="weight">Weight (lbs):</label>
+            <input type="text" id="weight" name="weight" required>
+
+            <label for="sex">Sex:</label>
+            <select id="sex" name="sex" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age" required>
+
+            <button type="submit">Submit</button>
+            <button type="button" onclick="skipForm()">Skip</button> <!-- Skip button -->
+        </form>
+    </div>
+
+    <script>
+        function skipForm() {
+            // Prepare data to submit
+            const formData = new FormData(document.getElementById('dataForm'));
+            formData.append('skip', 'true'); // Indicate that the skip button was clicked
+
+            // Create a new request
+            fetch(window.location.href, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                // Handle redirection based on the response if necessary
+                if (response.redirected) {
+                    window.location.href = response.url; // Redirect to the new page
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dietary Restrictions</title>
+    <style>
+        body {
+            background-image: url('https://i.redd.it/3zlq2oso9yba1.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #0033A0; /* UCSC Blue */
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center; /* Center the container horizontally */
+            align-items: center; /* Center the container vertically */
+            height: 100vh;
+        }
+
+        .container {
+            background: rgba(255, 204, 0, 0.95); /* Bright UCSC Gold */
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3), 
+                        inset 0 0 25px rgba(255, 255, 0, 0.3); /* Inner glow for shine effect */
+            max-width: 400px;
+            width: 100%; /* Responsive layout */
+            opacity: 0.95;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #0033A0;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        label {
+            font-size: 1.2rem;
+            font-weight: normal;
+            color: #0033A0;
+            display: block;
+            margin: 10px 0;
+            text-align: left;
+            transition: color 0.3s ease, transform 0.2s;
+        }
+
+        label:hover {
+            color: #fff; /* Change color on hover */
+            transform: scale(1.1); /* Scale up label when hovering */
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+
+        /* Rectangular "Next" button */
+        .submit-btn {
+            padding: 12px;
+            font-size: 1.3rem;
+            background-color: #0033A0;
+            color: #FFF;
+            border: none;
+            border-radius: 5px; /* Rectangular with rounded corners */
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .submit-btn:hover {
+            background-color: #001F5C;
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+            transform: translateY(-2px); /* Slightly lift the button on hover */
+        }
+
+        .submit-btn:active {
+            transform: translateY(0); /* Return to original position on click */
+            box-shadow: none; /* No shadow on click */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Select Your Dietary Restrictions</h1>
+
+        <form action="/dietary" method="POST">
+            {% for restriction in restrictions %}
+                <label>
+                    <input type="checkbox" name="restrictions" value="{{ restriction }}"> {{ restriction }}
+                </label>
+            {% endfor %}
+            <!-- Rectangular submit button -->
+            <button class="submit-btn" type="submit">Next</button>
+        </form>
+    </div>
+</body>
+</html>

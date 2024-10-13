@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Your Meal</title>
+    <style>
+        body {
+            background-image: url('https://i.redd.it/3zlq2oso9yba1.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #0033A0;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: rgba(255, 204, 0, 0.95); /* UCSC Gold */
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #0033A0;
+            margin-bottom: 30px;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .meal-card {
+            display: inline-block;
+            background-color: #0033A0; /* Blue box */
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            width: 120px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+            font-size: 1.2rem;
+            color: #ffcc00; /* Yellow text */
+        }
+
+        .meal-card:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .meal-card p {
+            margin: 0;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Select Your Meal</h1>
+        
+        <form method="POST">
+            <input type="hidden" id="meal" name="meal">
+            
+            <div class="meal-card" onclick="selectMeal('Breakfast')">
+                <p>Breakfast</p>
+            </div>
+
+            <div class="meal-card" onclick="selectMeal('Lunch')">
+                <p>Lunch</p>
+            </div>
+
+            <div class="meal-card" onclick="selectMeal('Dinner')">
+                <p>Dinner</p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function selectMeal(meal) {
+            document.getElementById('meal').value = meal;
+            document.forms[0].submit();
+        }
+    </script>
+</body>
+</html>

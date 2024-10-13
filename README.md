@@ -6,6 +6,7 @@ CruzFeeds is a Flask web application that allows users to select dining halls an
 Before you begin, ensure you have met the following requirements:
 - **Python 3.12** or later installed on your machine.
 - **Git** installed on your machine.
+- (Coculd also open through codespace if you'd like, same instructions without cloning repository)
 
 ## Installation Instructions
 1. **Clone the repository**:

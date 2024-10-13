@@ -10,9 +10,12 @@ Before you begin, ensure you have met the following requirements:
 ## Installation Instructions
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/asvinod/ACMHacks2024.git
-   cd ACMHacks2024
+   git clone https://github.com/asvinod/cruzfeeds-acm2024
+   cd cruzfeeds-acm2024
 2. **Create virtual environment (venv)**
+   ```bash
+   python -m venv venv
+3. Activate your virtual environment
    ### Windows 
    ```bash
    venv\Scripts\activate
